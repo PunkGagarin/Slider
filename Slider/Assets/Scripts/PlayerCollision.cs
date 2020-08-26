@@ -10,8 +10,8 @@ public class PlayerCollision : MonoBehaviour
 
         if (collisionInfo.collider.tag.Equals("Obstacle"))
         {
-            Debug.Log("We hot an obstacle!!!");
             movement.enabled = false;
+            FindObjectOfType<GameManager>().EndGame();
         }
         
     }
